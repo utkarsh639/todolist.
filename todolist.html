@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo List</title>
+</head>
+<body>
+    <script>
+        var todo = [];
+        function add_todo_item(new_item){
+            todo.push(new_item);
+        }
+
+        function list_todo_item(){
+            for(i=0; i<todo.length; i++)
+            console.log(todo[i])
+        }
+        function delete_todo_item(){
+             index = parseInt(prompt("enter a index for delete"))
+            todo.splice(index,1)
+            console.log(todo)
+        }
+        function edit_todo_item(){
+             var n = parseInt(prompt("enter a index no."))
+             var m = prompt("enter no.")
+            todo[n] = m
+            console.log(todo[n])
+        }
+        function checked_todo(new_item){
+            for(i=0;i<todo.length;i++){
+               if(todo[i] === new_item){
+               console.log(todo[i],"√")
+                   break;
+               }
+            } 
+            
+        }
+         
+    </script>
+</body>
+</html>
